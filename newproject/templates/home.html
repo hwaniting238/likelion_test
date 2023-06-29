@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <h1>동아리 모음</h1>
+    <a href="{% url 'create' %}">글쓰기</a>
+    
+    {% for team in club %}
+    <div>
+        <h2>제목: {{club.name}}</h2>
+        소개: {{club.intro}}
+        인원수: {{club.head}}
+
+        <a href="{% url 'detail' movie.id %}"><button>자세히</button></a>
+        <a href="">업데이트</a>
+        <a href="">지우기</a>
+
+    
+
+    </div>
+    {% endfor %}
+
+</body>
+
+
+
+
+
+
+
+{% endblock %}
